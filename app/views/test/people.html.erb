@@ -1,0 +1,27 @@
+<h1>PEOPLE SECTION</h1>
+<a href="#" id="create">Create</a>
+<a href="#" id="list">list</a>
+<a href="#" id="update">Update</a>
+<a href="#" id="delete">Delete</a>
+
+<script>
+$("#create").click(function(){
+<%= peopleModel=PeopleModel.new(name:"ved") 
+peopleModel.save
+%>
+});
+$("#list").click(function(){
+});
+$("#update").click(function(){
+});
+$("#delete").click(function(){
+});
+</script>
+
+<div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
