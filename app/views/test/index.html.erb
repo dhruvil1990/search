@@ -1,4 +1,52 @@
+<script>
+$(function(){
 
+
+	$("#people").hover(
+		function(e){
+			$("#box").html("");
+			$("#box").html("People");
+			$("#box").css("display","box");
+			$("#box").css("left",e.pageX);
+			$("#box").css("top",e.pageY);
+			}
+		,
+		function(){
+			$("#box").css("display","none");
+		}
+	);
+	
+	$("#keywords").hover(
+		function(e){
+			$("#box").html("");
+			$("#box").html("Keywords");
+			$("#box").css("display","box");
+			$("#box").css("left",e.pageX);
+			$("#box").css("top",e.pageY);
+		}
+		,
+		function(){
+			$("#box").css("display","none");
+		}
+	);
+	
+	$("#search").hover(
+		function(e){
+			$("#box").html("");
+			$("#box").html("Search");
+			$("#box").css("display","box");
+			$("#box").css("left",e.pageX);
+			$("#box").css("top",e.pageY);
+			}
+		,
+		function(){
+			$("#box").css("display","none");
+		}
+	);
+	
+});
+</script>
+<div id="box" style="position:absolute; display:none; width:50px; height:20px; background:#ee0"></div>
 	<div id="page">
 		<div class="bgtop">
 			<div class="bgbtm">
@@ -9,9 +57,9 @@
 						<div class="entry">
 							<p>
 								<strong>
-									<a href="/test/people"><img src="/images/img05.jpg" alt="" width="131" height="131" class="left" /></a> 
-									<a href="/test/keywords"><img src="/images/img05.jpg" alt="" width="131" height="131" class="left" /></a>
-									<img src="/images/img05.jpg" alt="" width="131" height="131" class="left" />
+									<a href="/test/people" id="people"><img src= "/assets/people.jpg" alt="" width="131" height="131" class="left" /></a>
+									<a href="/test/keywords" id="keywords"><img src=	"/assets/keywords.png" alt="" width="131" height="131" class="left" /></a>
+									<a href="#" id="search"><img src="/assets/search.png" alt="" width="131" height="131" class="left" /></a>
 								</strong> 
 							</p>
 						</div>

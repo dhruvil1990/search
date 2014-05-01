@@ -8,15 +8,15 @@ class TestController < ApplicationController
 
   def people
  
-	var mongo=require("mongodb")
-	var serv=mongo.Server("localhost", 27017)
-	var dbase=mongo.Db("MyDatabase", serv)
-	db_config = YAML::load(File.read("c:/Sites/search/config/database.yml"))
+	#var mongo=require("mongodb")
+	#var serv=mongo.Server("localhost", 27017)
+	#var dbase=mongo.Db("MyDatabase", serv)
+	#db_config = YAML::load(File.read(Rails.root+"/config/database.yml"))
  
-		mongo = db_config[Rails.env]
-		Mongo::Connection.new("localhost", 27017, :pool_size => 5, :pool_timeout => 5)
-		MongoMapper.connection = Mongo::Connection.new(mongo['localhost'])
-		MongoMapper.database = mongo['database']
+	#	mongo = db_config[Rails.env]
+	#	Mongo::Connection.new("localhost", 27017, :pool_size => 5, :pool_timeout => 5)
+	#	MongoMapper.connection = Mongo::Connection.new(mongo['localhost'])
+	#	MongoMapper.database = mongo['database']
 
   
 	#client=MongoClient.new
